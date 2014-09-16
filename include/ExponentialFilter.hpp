@@ -48,19 +48,23 @@ namespace MbeddedNinja
 	namespace MFilters
 	{
 
-		//! @brief		Offline exponential IIR filter.
+		//! @brief		Offline (i.e. you have to call Run() everytime you want it to perform an
+		//!				iteration) exponential IIR digital filter.
 		//! @details	Exceptions are not used.
 		class ExponentialFilter
 		{
 
 			public:
 
-
-
 			//======================================================================================//
 			//==================================== PUBLIC METHODS ==================================//
 			//======================================================================================//
 
+			//! @brief		Constructor for an exponential filter.
+			//! @param [in]		smoothingConstant	The smoothing constant for the filter. This is commonly
+			//!						labelled as 'a'. This has to be between 0 and 1 (inclusive).
+			//! @param [in]		initialValue		The initial value you want the output set to. This is also
+			//!						provided when you call the Reset() method.
 			ExponentialFilter(
 				float smoothingConstant,
 				float initialValue) :
@@ -71,6 +75,9 @@ namespace MbeddedNinja
 				M_ASSERT((smoothingConstant >= 0.0) && (smoothingConstant <= 1.0));
 			}
 
+			//! @brief		Perform one iteration of the digital exponential filter.
+			//! @param [in]	input	The input value for this one iteration.
+			//! @returns	Returns the output of the filter for the one iteration.
 			float Run(float input)
 			{
 
@@ -79,6 +86,14 @@ namespace MbeddedNinja
 
 				// Return the calculated output, y(k)
 				return this->output;
+			}
+
+			//! @brief		Resets the output of the filter to the specified value.
+			//! @param [in]		The initial value you want the output reset to.
+			void Reset(float initialValue)
+			{
+				// Set the output to the initial value
+				this->output = initialValue;
 			}
 
 			//======================================================================================//
