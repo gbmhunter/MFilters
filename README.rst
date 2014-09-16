@@ -12,7 +12,7 @@ A microcontroller-friendly C++ filter library.
 - Author: gbmhunter <gbmhunter@gmail.com> (www.mbedded.ninja)
 - First Ever Commit: 2014-09-16
 - Last Modified: 2014-09-16
-- Version: v1.2.0.0
+- Version: v1.2.1.0
 - Company: mbedded.ninja
 - Project: MToolkit
 - Language: C++
@@ -61,6 +61,7 @@ Changelog
 ========= ========== ===================================================================================================
 Version   Date       Comment
 ========= ========== ===================================================================================================
+v1.2.1.0  2014-09-16 s
 v1.2.0.0  2014-09-16 Added ability to reset the exponential filter with the 'Reset()' method, closes #2. Added more Doxygen comments to exponential filter header.
 v1.1.0.0  2014-09-16 ExponentialFilter can now be initialised to a certain value through the constructor, closes #1. Added simple on-edge case test for the exponential filter.
 v1.0.0.0  2014-09-16 Initial commit. Added ExponentialFilter class and a few basic unit tests. Some unit tests are currently failing because the MUnitTest module does not yest provide a CHECK_CLOSE() macro, which is on the todo list.

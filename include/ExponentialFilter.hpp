@@ -45,7 +45,7 @@ namespace MbeddedNinja
 namespace MbeddedNinja
 {
 
-	namespace MFilters
+	namespace MFiltersNs
 	{
 
 		//! @brief		Offline (i.e. you have to call Run() everytime you want it to perform an

@@ -28,7 +28,7 @@
 namespace MbeddedNinja
 {
 
-	namespace MFilters
+	namespace MFiltersNs
 	{
 
 		//============================================================================================//

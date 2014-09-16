@@ -24,7 +24,7 @@ namespace MFiltersTestsNs
 	MTEST(BasicExpFilterTest)
 	{
 		// Create an exponential filter
-		MFilters::ExponentialFilter myExpFilter(0.5, 0.0);
+		MFiltersNs::ExponentialFilter myExpFilter(0.5, 0.0);
 
 		// Check
 		CHECK_EQUAL(0.0, myExpFilter.Run(0.0));
@@ -34,7 +34,7 @@ namespace MFiltersTestsNs
 	{
 		// Create an exponential filter, setting
 		// a to 1. Output should remain at 0.
-		MFilters::ExponentialFilter myExpFilter(1.0, 0.0);
+		MFiltersNs::ExponentialFilter myExpFilter(1.0, 0.0);
 
 		// Check that the output remains at 0
 		CHECK_EQUAL(0.0, myExpFilter.Run(10.0));
@@ -50,7 +50,7 @@ namespace MFiltersTestsNs
 	{
 		// Create an exponential filter, setting
 		// a to 0. Output should follow input.
-		MFilters::ExponentialFilter myExpFilter(0.0, 0.0);
+		MFiltersNs::ExponentialFilter myExpFilter(0.0, 0.0);
 
 		// Check that the output follows input
 		//CHECK_EQUAL(10.0, myExpFilter.Run(10.0));
@@ -66,7 +66,7 @@ namespace MFiltersTestsNs
 	{
 		// Create an exponential filter, setting
 		// a to 0.5 and initial value to 0.0.
-		MFilters::ExponentialFilter myExpFilter(0.5, 0.0);
+		MFiltersNs::ExponentialFilter myExpFilter(0.5, 0.0);
 
 		CHECK_EQUAL(0.5, myExpFilter.Run(1.0));
 
@@ -82,7 +82,7 @@ namespace MFiltersTestsNs
 	{
 		// Create an exponential filter, setting
 		// a to 1. Output should remain at 0.
-		MFilters::ExponentialFilter myExpFilter(1.0, 0.5);
+		MFiltersNs::ExponentialFilter myExpFilter(1.0, 0.5);
 
 		// Check that the output remains at 0.5
 		CHECK_EQUAL(0.5, myExpFilter.Run(10.0));
