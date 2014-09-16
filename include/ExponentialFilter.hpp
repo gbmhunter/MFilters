@@ -62,9 +62,10 @@ namespace MbeddedNinja
 			//======================================================================================//
 
 			ExponentialFilter(
-				float smoothingConstant) :
+				float smoothingConstant,
+				float initialValue) :
 					smoothingConstant(smoothingConstant),
-					output(0.0)
+					output(initialValue)
 			{
 				// Make sure the smoothing constant is between 0 and 1 (inclusive)
 				M_ASSERT((smoothingConstant >= 0.0) && (smoothingConstant <= 1.0));
